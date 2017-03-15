@@ -66,10 +66,6 @@ body {
   flex: 1;
 }
 
-#fontSize select {
-  flex-shrink: 1;
-}
-
 #valign input {
   margin-left: 25px;
 }
