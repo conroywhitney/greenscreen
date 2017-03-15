@@ -1,25 +1,29 @@
 <html>
 <head>
-  <title>Jawsh Canvas Text</title>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <title>Green Screen Text</title>
+  <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-  <div id="wrapper">
-    <canvas id="canvas"></canvas>
-    <form id="form">
-      <fieldset>
-        <legend>Text</legend>
-        <input type="text" id="text" maxlength="250" />
-      </fieldset>
-      <fieldset>
-        <legend>Align</legend>
-        <input type="radio" name="align" id="top" value="top" />
+  <div id="greenScreen">
+    <div id="messageWrapper" v-bind:class="wrapperClass">
+      <div id="message">{{ message }}</div>
+    </div>
+
+    <div id="inputs">
+      <input id="text" v-model="message">
+      <div id="radios">
+        <input type="radio" name="valign" id="top" value="top" v-model="valign">
         <label for="top">Top</label>
-        <input type="radio" name="align" id="bottom" value="bottom" />
-        <label for="top">Bottom</label>
-      </fieldset>
-    </form>
+
+        <input type="radio" name="valign" id="middle" value="middle" v-model="valign">
+        <label for="middle">Middle</label>
+
+        <input type="radio" name="valign" id="bottom" value="bottom" v-model="valign">
+        <label for="bottom">Bottom</label>
+      </div>
+    </div>
   </div>
+
+  <script type="text/javascript" src="script.js"></script>
 </body>
