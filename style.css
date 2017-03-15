@@ -1,0 +1,18 @@
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #F0F;
+}
+
+#canvas {
+  flex: 1;
+  border: 1px solid #000;
+}
+
+#form {
+  flex: 1;
+}
+
+#text {
+  width: 100%;
+}
