@@ -2,6 +2,7 @@ var greenScreen = new Vue({
 	el: '#greenScreen',
 	data: {
 		fontFamily: 'monospace',
+		fontSize: '96',
 		message: 'Hello Jawsh!',
 		valign: 'middle'
 	},
@@ -14,7 +15,8 @@ var greenScreen = new Vue({
 			}[this.fontFamily]
 
 			return {
-				fontFamily
+				fontFamily,
+				fontSize: `${this.fontSize}px`
 			}
 		},
 		wrapperStyle: function () {

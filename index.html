@@ -14,7 +14,7 @@
     <div id="inputs">
       <input id="text" v-model="message">
 
-      <div id="fonts">
+      <div id="fontFamily">
         <select v-model="fontFamily">
           <option value="monospace">Monospace</option>
           <option value="serif">Serif</option>
@@ -22,7 +22,27 @@
         </select>
       </div>
 
-      <div id="radios">
+      <div id="fontSize">
+        <select v-model="fontSize">
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="18">18</option>
+          <option value="24">24</option>
+          <option value="36">36</option>
+          <option value="48">48</option>
+          <option value="64">64</option>
+          <option value="72">72</option>
+          <option value="96">96</option>
+          <option value="144">144</option>
+          <option value="288">288</option>
+        </select>
+      </div>
+
+      <div id="valign">
         <input type="radio" name="valign" id="top" value="top" v-model="valign">
         <label for="top">Top</label>
 

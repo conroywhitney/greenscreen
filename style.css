@@ -36,23 +36,40 @@ body {
 }
 
 #text {
-  flex: 1;
+  flex: 5;
   font-size: 16pt;
   padding: 5px 10px;
 }
 
-#fonts,
-#radios {
+#fontFamily,
+#fontSize,
+#valign {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+#fontFamily,
+#valign {
   min-width: 250px;
 }
 
-#fonts select {
+#fontSize {
+  min-width: 125px;
+}
+
+#fontFamily select {
   width: 80%;
 }
 
-#radios input {
+#fontSize {
+  flex: 1;
+}
+
+#fontSize select {
+  flex-shrink: 1;
+}
+
+#valign input {
   margin-left: 25px;
 }
