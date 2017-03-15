@@ -53,8 +53,12 @@ var greenScreen = new Vue({
     fontSize: function (newFontSize) {
       this.resetFontScale()
     },
-    message: function (newMessage) {
-      this.updateFontScale()
+    message: function (newMessage, oldMessage) {
+      var messageCleared = newMessage.trim().length === 0
+
+      messageCleared
+        ? this.resetFontScale()
+        : this.updateFontScale()
     }
   }
 })
