@@ -21,12 +21,14 @@ body {
   flex-direction: column;
   flex: 1;
   font-size: 16pt;
+  align-items: center;
 }
 
 #message {
   padding: 25px 0;
   text-align: center;
-  width: 100%;
+  white-space: nowrap;
+  width: 90%;
 }
 
 #inputs {
