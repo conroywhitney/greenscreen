@@ -1,15 +1,16 @@
 var greenScreen = new Vue({
 	el: '#greenScreen',
 	data: {
-		valign: 'top',
+		valign: 'Middle',
 		message: 'Hello Jawsh!'
 	},
 	computed: {
 		wrapperClass: function () {
 			return {
-				valignTop: this.valign === 'top',
-				valignMiddle: this.valign === 'middle',
-				valignBottom: this.valign === 'bottom',
+				// This will turn into the class valignTop, valignMiddle, valignBottom
+				// Depending on the value="[Top|Middle|Bottom]" of the selected radio
+				// And maps to the #messageWrapper.valign[Top|Middle|Bottom] css class
+				[`valign${this.valign}`]: true
 			}
 		}
 	}
