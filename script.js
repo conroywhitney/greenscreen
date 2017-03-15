@@ -3,7 +3,7 @@ var greenScreen = new Vue({
   data: {
     fontFamily: 'monospace',
     fontSize: '96',
-    message: 'Hello Jawsh!',
+    message: 'Greenscreen',
     valign: 'middle'
   },
   computed: {
