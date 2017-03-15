@@ -44,7 +44,9 @@ var greenScreen = new Vue({
       var $message = document.getElementById('message')
       var overflowed = $message.scrollWidth > $message.clientWidth
 
-      if (overflowed) this.$set(this, 'fontScale', this.fontScale - scaleSpeed)
+      if (overflowed) {
+        this.$set(this, 'fontScale', this.fontScale * (1 - scaleSpeed))
+      }
     }
   },
   watch: {
