@@ -41,6 +41,18 @@ body {
   width: 100%;
 }
 
+#message.monospace {
+  font-family: 'VT323', monospace;
+}
+
+#message.serif {
+  font-family: 'Droid Serif', serif;
+}
+
+#message.sansSerif {
+  font-family: 'Open Sans', sans-serif;
+}
+
 #inputs {
   display: flex;
   height: 50px;
@@ -53,11 +65,16 @@ body {
   padding: 5px 10px;
 }
 
+#fonts,
 #radios {
   align-items: center;
   display: flex;
   justify-content: center;
   min-width: 250px;
+}
+
+#fonts select {
+  width: 80%;
 }
 
 #radios input {

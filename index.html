@@ -2,16 +2,26 @@
 <head>
   <title>Green Screen Text</title>
   <script src="https://unpkg.com/vue"></script>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans|VT323" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
   <div id="greenScreen">
-    <div id="messageWrapper" v-bind:class="wrapperClass">
-      <div id="message">{{ message }}</div>
+    <div id="messageWrapper" v-bind:class="valignClass">
+      <div id="message" v-bind:class="fontClass">{{ message }}</div>
     </div>
 
     <div id="inputs">
       <input id="text" v-model="message">
+
+      <div id="fonts">
+        <select v-model="font">
+          <option value="monospace">Monospace</option>
+          <option value="serif">Serif</option>
+          <option value="sans-serif">Sans-Serif</option>
+        </select>
+      </div>
+
       <div id="radios">
         <input type="radio" name="valign" id="top" value="Top" v-model="valign">
         <label for="top">Top</label>
