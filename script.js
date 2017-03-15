@@ -2,6 +2,7 @@ var greenScreen = new Vue({
   el: '#greenScreen',
   data: {
     fontFamily: 'monospace',
+    fontScale: 1,
     fontSize: '96',
     message: 'Greenscreen',
     valign: 'middle'
@@ -14,9 +15,11 @@ var greenScreen = new Vue({
         'serif': "'Droid Serif', serif"
       }[this.fontFamily]
 
+      var scaledFontSize = this.fontSize * this.fontScale
+
       return {
         fontFamily,
-        fontSize: `${this.fontSize}px`
+        fontSize: `${scaledFontSize}px`
       }
     },
     wrapperStyle: function () {
@@ -29,6 +32,14 @@ var greenScreen = new Vue({
       return {
         justifyContent
       }
+    }
+  },
+  watch: {
+    message: function (newMessage) {
+      var $message = document.getElementById('message')
+      var overflowed = $message.scrollWidth > $message.clientWidth
+
+      if (overflowed) this.$set(this, 'fontScale', this.fontScale - 0.1)
     }
   }
 })
