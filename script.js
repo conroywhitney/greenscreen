@@ -1,25 +1,31 @@
 var greenScreen = new Vue({
 	el: '#greenScreen',
 	data: {
-		font: 'monospace',
+		fontFamily: 'monospace',
 		message: 'Hello Jawsh!',
-		valign: 'Middle'
+		valign: 'middle'
 	},
 	computed: {
-		fontClass: function () {
+		messageStyle: function () {
+			var fontFamily = {
+				'monospace': "'VT323', monospace",
+				'sansSerif': "'Open Sans', sans-serif",
+				'serif': "'Droid Serif', serif"
+			}[this.fontFamily]
+
 			return {
-				// This will turn into the class monospace, serif, and sansSerif
-				// Depending on the value="" of the selected font dropdown
-				// And maps to the #message.[monospace|serif|sansSerif] css class
-				[`${this.font}`]: true
+				fontFamily
 			}
 		},
-		valignClass: function () {
+		wrapperStyle: function () {
+			var justifyContent = {
+				top: 'flex-start',
+				middle: 'center',
+				bottom: 'flex-end'
+			}[this.valign]
+
 			return {
-				// This will turn into the class valignTop, valignMiddle, valignBottom
-				// Depending on the value="[Top|Middle|Bottom]" of the selected radio
-				// And maps to the #messageWrapper.valign[Top|Middle|Bottom] css class
-				[`valign${this.valign}`]: true
+				justifyContent
 			}
 		}
 	}

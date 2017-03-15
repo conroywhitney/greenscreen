@@ -7,29 +7,29 @@
 </head>
 <body>
   <div id="greenScreen">
-    <div id="messageWrapper" v-bind:class="valignClass">
-      <div id="message" v-bind:class="fontClass">{{ message }}</div>
+    <div id="messageWrapper" v-bind:style="wrapperStyle">
+      <div id="message" v-bind:style="messageStyle">{{ message }}</div>
     </div>
 
     <div id="inputs">
       <input id="text" v-model="message">
 
       <div id="fonts">
-        <select v-model="font">
+        <select v-model="fontFamily">
           <option value="monospace">Monospace</option>
           <option value="serif">Serif</option>
-          <option value="sans-serif">Sans-Serif</option>
+          <option value="sansSerif">Sans-Serif</option>
         </select>
       </div>
 
       <div id="radios">
-        <input type="radio" name="valign" id="top" value="Top" v-model="valign">
+        <input type="radio" name="valign" id="top" value="top" v-model="valign">
         <label for="top">Top</label>
 
-        <input type="radio" name="valign" id="middle" value="Middle" v-model="valign">
+        <input type="radio" name="valign" id="middle" value="middle" v-model="valign">
         <label for="middle">Middle</label>
 
-        <input type="radio" name="valign" id="bottom" value="Bottom" v-model="valign">
+        <input type="radio" name="valign" id="bottom" value="bottom" v-model="valign">
         <label for="bottom">Bottom</label>
       </div>
     </div>

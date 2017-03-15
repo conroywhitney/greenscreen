@@ -23,34 +23,10 @@ body {
   font-size: 16pt;
 }
 
-#messageWrapper.valignTop {
-  justify-content: flex-start;
-}
-
-#messageWrapper.valignMiddle {
-  justify-content: center;
-}
-
-#messageWrapper.valignBottom {
-  justify-content: flex-end;
-}
-
 #message {
   padding: 25px 0;
   text-align: center;
   width: 100%;
-}
-
-#message.monospace {
-  font-family: 'VT323', monospace;
-}
-
-#message.serif {
-  font-family: 'Droid Serif', serif;
-}
-
-#message.sansSerif {
-  font-family: 'Open Sans', sans-serif;
 }
 
 #inputs {
